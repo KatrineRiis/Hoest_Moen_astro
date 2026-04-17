@@ -1,0 +1,74 @@
+---
+const { text, imgSrc } = Astro.props;
+const id = `pop-${text}`;
+---
+
+<button
+  type="button"
+  class="arkiv_button"
+  onclick={`
+    const pop = document.getElementById('${id}');
+    pop?.showModal?.();
+  `}
+>
+  {text}
+</button>
+
+<dialog id={id} class="popover" onclick="if (event.target === this) this.close()">
+  <button class="close-btn" onclick="this.closest('dialog').close()">×</button>
+
+  <img src={imgSrc} alt={text} />
+</dialog>
+
+<style>
+  .arkiv_button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.3rem;
+    display: inline-block;
+    color: #bde300;
+    border: 2px solid #bde300;
+    border-radius: 999px;
+    padding: 8px 80px;
+    margin: 0 auto;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .arkiv_button:hover {
+    background-color: black;
+    border-color: black;
+  }
+
+  .popover {
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+  }
+
+  .popover img {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  dialog::backdrop {
+    background: rgba(19, 24, 20, 0.8);
+  }
+</style>

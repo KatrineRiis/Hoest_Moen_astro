@@ -1,0 +1,14 @@
+---
+const url = `${import.meta.env.SUPABASE_URL}/rest/v1/Hoest_Moen?select=*`;
+const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
+
+const options = {
+  headers: {
+    apikey: apiKey,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+
+console.log(data);
+---
