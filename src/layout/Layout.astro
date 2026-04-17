@@ -1,0 +1,77 @@
+---
+const { title } = Astro.props;
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Program</a></li>
+
+          <li><a href="">Bliv Frivillig</a></li>
+          <li><a href="praktisk">Praktisk</a></li>
+          <li><a href="omOs">Om os</a></li>
+          <li class="Billerter_Burger"><a href="cart.html">Billetter</a></li>
+        </ul>
+      </nav>
+
+      <a class="Billetter" href="cart.html">Billetter</a>
+
+      <button class="burger" aria-label="Menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="Section_divider"></div>
+      <div class="footer_grid_1-1">
+        <div>
+          <p>Sommerens sidste skrig</p>
+          <p>Vender tilbage i 2026</p>
+          <p>Det bliver højt og smukt</p>
+        </div>
+
+        <div class="Kontakt">
+          <a href="#">info@hoestmoen.dk</a>
+          <div class="soMe_icons">
+            <img src="img/Hoest-Moen.jpg" alt="" />
+            <img src="img/Hoest-Moen.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style></style>
+
+<script>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+
+  burger.addEventListener("click", burgerClick);
+  function burgerClick() {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  }
+</script>
