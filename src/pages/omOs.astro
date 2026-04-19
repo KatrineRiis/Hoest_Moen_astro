@@ -4,18 +4,10 @@ import ArkivPoster from "../components/ArkivPoster.astro";
 import Layout from "../layout/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Om Os</title>
-    <link rel="stylesheet" href="OmOs.css" />
-  </head>
-
-  <body>
-    <main>
-      <h1 class="om_header">OM HØST MØN</h1>
+<Layout title="Om Os">
+  <main>
+    <h1 class="om_header">OM HØST MØN</h1>
+    <div class="omOs_wrapper">
       <p class="omOs_tekst">Billetterne er i salg nu! Inflationen inden for æstetik, alkohol og gebyrer er stadig høj, så priserne bliver nødt til at følge med. Men det lover vi, at kvaliteten og oplevelsen også gør, og vi stiller pengene-tilbage-garanti for enorm lykke. Hvad med navnet? Det finder vi ud af. Indtil videre hedder vi det samme. Man kan tage festivalen ud af Møn, men ikke Møn ud af festivalen og alt det der.</p>
 
       <p class="omOs_tekst">Det er den syvende Høst Møn på ni år, for hverken verdensomspændende pandemier eller lokalt huserende markfirben kan holde os fra at skabe skønne, støjende fællesskaber på sydlige breddegrader med alle jer.</p>
@@ -27,78 +19,134 @@ import Layout from "../layout/Layout.astro";
       <p class="omOs_tekst">Du kan gøre, hvad du vil på Høst Møn – med eller uden børn og søvn. Omgivelserne er trygge, og rammerne er vide, og hvis du vil bade om natten og drikke om morgenen, så kan du gøre det. Så længe du ikke snakker foran scenen, når musikken spiller.</p>
 
       <p class="omOs_tekst">Det lykkedes os ikke at finde et nyt sted i 2025, så i stedet brugte vi vores kræfter på at kuratere og afvikle musik til den nystartede Impact Festival i Københavns Sydhavn sammen med de fine folk fra Trifolium. Det gør vi igen i 2026, samtidig med at vi holder Høst Møn.</p>
+    </div>
 
-      <div class="omOs_tekst">
-        <p>Kontakt os:</p>
-        <p>Spørgsmål, samarbejde, generel info: <span class="links">info@hoestmoen.dk</span></p>
-        <p>Booking: <span class="links">booking@hoestmoen.dk</span></p>
-        <p>Produktion (scene, plads, infrastruktur): <span class="links">produktion@hoestmoen.dk</span></p>
-        <p>Frivillige: <span class="links">frivillig@hoestmoen.dk</span></p>
-      </div>
+    <div class="omOs_tekst">
+      <p class="kontakt_tekst">Kontakt os:</p>
+      <p class="kontakt_tekst">Spørgsmål, samarbejde, generel info: <span class="links">info@hoestmoen.dk</span></p>
+      <p class="kontakt_tekst">Booking: <span class="links">booking@hoestmoen.dk</span></p>
+      <p class="kontakt_tekst">Produktion (scene, plads, infrastruktur): <span class="links">produktion@hoestmoen.dk</span></p>
+      <p class="kontakt_tekst">Frivillige: <span class="links">frivillig@hoestmoen.dk</span></p>
+    </div>
 
-      <h2 class="arkiv_header">ARKIV</h2>
-      <hr />
-      <div class="grid_1_1">
-        <ArkivPoster imgSrc="././HM_18.webp" alt="2018" year="2018" />
-        <ArkivPoster imgSrc="././HM_19.webp" alt="2019" year="2019" />
-        <ArkivPoster imgSrc="././HM_21.webp" alt="2021" year="2021" />
-        <ArkivPoster imgSrc="././HM_22.webp" alt="2022" year="2022" />
-        <ArkivPoster imgSrc="././HM_23.webp" alt="2023" year="2023" />
-        <ArkivPoster imgSrc="././HM_24.webp" alt="2024" year="2024" />
-      </div>
-    </main>
-  </body>
-</html>
+    <h2 class="arkiv_header">ARKIV</h2>
+    <hr />
+    <div class="grid_1_1">
+      <ArkivPoster imgSrc="././HM_18.webp" alt="2018" year="2018" />
+      <ArkivPoster imgSrc="././HM_19.webp" alt="2019" year="2019" />
+      <ArkivPoster imgSrc="././HM_21.webp" alt="2021" year="2021" />
+      <ArkivPoster imgSrc="././HM_22.webp" alt="2022" year="2022" />
+      <ArkivPoster imgSrc="././HM_23.webp" alt="2023" year="2023" />
+      <ArkivPoster imgSrc="././HM_24.webp" alt="2024" year="2024" />
+    </div>
+  </main>
+</Layout>
 
 <style>
+  /*mobile*/
   body {
     background-color: #0b2320;
-  }
-
-  .arkiv_header {
-    font-size: 2rem;
-    margin-left: 250px;
-    margin-top: 100px;
+    margin: 0;
+    font-family: sans-serif;
   }
 
   h1,
   h2,
   p {
-    font-family: Arial, Helvetica, sans-serif;
     color: #eed094;
+    margin: 0;
   }
 
   .links {
     color: #bde300;
   }
+
   hr {
     border: none;
     height: 2px;
     background-color: #eed094;
-    max-width: 1170px;
-    margin-bottom: 100px;
+    max-width: 350px;
+    margin: 10px auto 100px auto;
   }
 
-  .omOs_tekst {
-    max-width: 1170px;
-    margin: 0 auto;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+  /* Header */
+  .arkiv_header {
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 4rem 0 0 2.5rem;
+  }
+
+  .omOs_wrapper {
+    margin-top: 3rem;
   }
 
   .om_header {
-    font-size: 3rem;
+    letter-spacing: 5px;
     text-align: center;
+    font-size: 2.3rem;
+    margin-top: 10rem;
   }
 
-  .grid_1_1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 7rem;
-    justify-items: center;
-    align-items: center;
-    max-width: 1300px;
-    margin: 0 auto;
+  /* Text container */
+  .omOs_tekst {
+    margin: 0 auto 1.5rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .kontakt_tekst {
+    font-size: 1rem;
+  }
+
+  /* Desktop */
+
+  @media (min-width: 1024px) {
+    .grid_1_1 {
+      display: grid;
+      grid-template-columns: 1fr; /* stacked on mobile */
+      gap: 3rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .arkiv_header {
+      font-size: 2rem;
+      text-align: left;
+      margin: 100px auto 2rem 260px;
+      max-width: 1300px;
+    }
+
+    hr {
+      max-width: 1170px;
+    }
+
+    .om_header {
+      font-size: 5rem;
+      letter-spacing: 10px;
+      margin-top: 10rem;
+      margin-bottom: 5rem;
+    }
+
+    .grid_1_1 {
+      grid-template-columns: 1fr 1fr; /* 2 columns */
+      gap: 7rem;
+      align-items: center;
+    }
+
+    .omOs_wrapper {
+      margin-top: 0;
+    }
+
+    .omOs_tekst {
+      padding: 0;
+      max-width: 1170px;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+    .kontakt_tekst {
+      font-size: 1.5rem;
+    }
   }
 </style>
