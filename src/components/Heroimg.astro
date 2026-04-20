@@ -1,0 +1,17 @@
+---
+import Image from "astro/components/Image.astro";
+import Hero from "../assets/praktisk_img/Hero_img.webp";
+---
+
+<Image class="Background_img" src={Hero} alt="Stemningsbillede af festivallen" />
+
+<style>
+  .Background_img {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: auto;
+    opacity: 0.06;
+    margin-top: 0rem;
+  }
+</style>
