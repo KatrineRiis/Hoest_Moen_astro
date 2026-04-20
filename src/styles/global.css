@@ -31,7 +31,7 @@ h1 {
   font-weight: 400;
   font-style: normal;
   color: var(--text-color);
-  font-size: 96px;
+  font-size: 36px;
 }
 
 h2,
@@ -41,6 +41,14 @@ h4 {
 
   font-style: normal;
   color: var(--text-color);
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
 }
 
 p,
@@ -53,7 +61,8 @@ dt {
   font-style: normal;
   font-variation-settings: "wdth" 100;
   color: var(--text-color);
-  font-size: 24px;
+  font-size: 11px;
+  line-height: 1rem;
 }
 
 a {
@@ -163,6 +172,36 @@ nav.active .menu li {
   display: none;
 }
 
+/********** FOOTER ************/
+footer img {
+  width: 40px;
+  height: auto;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.Section_divider {
+  height: 3px;
+  background-color: #eed094;
+  width: 100%;
+  grid-column: span 2;
+  margin-bottom: 2rem;
+}
+
+.Kontakt {
+  margin-top: 2rem;
+}
+.soMe_icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/********** VISUELLE *********/
+
 /********** DESKTOP **********/
 @media (min-width: 801px) {
   /********** MENU **********/
@@ -222,6 +261,11 @@ nav.active .menu li {
     margin: 5rem;
   }
 
+  footer p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
   .soMe_icons {
     display: flex;
     flex-direction: row;
@@ -232,7 +276,33 @@ nav.active .menu li {
 
   .Kontakt {
     justify-self: right;
+    align-self: start;
+    margin-top: 0;
+  }
+
+  footer img {
+    width: 70px;
+    height: auto;
   }
 
   /******** FONTS *******/
+
+  h1 {
+    font-size: 96px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  h3 {
+    font-size: 48px;
+  }
+
+  p,
+  a,
+  ul,
+  li,
+  dt {
+    font-size: 24px;
+    line-height: 2rem;
+  }
 }
