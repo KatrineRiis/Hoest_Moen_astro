@@ -221,6 +221,7 @@ footer p {
 
   .menu a {
     color: var(--cta-color);
+    margin-left: 1rem;
   }
 
   .cart {
@@ -240,7 +241,7 @@ footer p {
     border-radius: 50px;
     color: black;
     text-decoration: none;
-
+    margin-right: 1rem;
     font-size: 1.2rem;
   }
 

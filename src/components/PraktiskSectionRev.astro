@@ -1,9 +1,8 @@
 ---
-const { title } = Astro.props;
-import CircleElement from "./CircleElement.astro";
+const { title, id } = Astro.props;
 ---
 
-<section>
+<section {id}>
   <div class="Praktisk_Section">
     <div class="grid_1-1">
       <h2>{title}</h2>
@@ -41,10 +40,8 @@ import CircleElement from "./CircleElement.astro";
   }
 
   section {
-    margin-bottom: 3rem;
+    margin: 0rem 1rem 3rem 1rem;
   }
-
- 
 
   /********** SECTION DIVIDER ***********/
   .Section_divider {
