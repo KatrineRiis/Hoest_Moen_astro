@@ -2,6 +2,9 @@
 import ArkivPoster from "../components/ArkivPoster.astro";
 import Heroimg from "../components/Heroimg.astro";
 import Layout from "../layout/Layout.astro";
+import { Image } from "astro:assets";
+import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
+import CircleElement from "../components/CircleElement.astro";
 ---
 
 <Layout title="Om Os">
@@ -21,6 +24,8 @@ import Layout from "../layout/Layout.astro";
     <p class="omOs_tekst">Det lykkedes os ikke at finde et nyt sted i 2025, så i stedet brugte vi vores kræfter på at kuratere og afvikle musik til den nystartede Impact Festival i Københavns Sydhavn sammen med de fine folk fra Trifolium. Det gør vi igen i 2026, samtidig med at vi holder Høst Møn.</p>
   </div>
 
+  <Image class="vector_img" src={BackVector} alt="Grafisk element i baggrunden af siden" />
+
   <div class="omOs_tekst">
     <p class="kontakt_tekst">Kontakt os:</p>
     <p class="kontakt_tekst">Spørgsmål, samarbejde, generel info: <span class="links">info@hoestmoen.dk</span></p>
@@ -29,15 +34,20 @@ import Layout from "../layout/Layout.astro";
     <p class="kontakt_tekst">Frivillige: <span class="links">frivillig@hoestmoen.dk</span></p>
   </div>
 
-  <h2 class="arkiv_header">ARKIV</h2>
+  <div class="arkiv_wrapper">
+    <h2 class="arkiv_header">ARKIV</h2>
+    <div class="circle_wrapper">
+      <CircleElement />
+    </div>
+  </div>
   <hr />
   <div class="grid_1_1">
-    <ArkivPoster imgSrc="././HM_18.webp" alt="2018" year="2018" />
-    <ArkivPoster imgSrc="././HM_19.webp" alt="2019" year="2019" />
-    <ArkivPoster imgSrc="././HM_21.webp" alt="2021" year="2021" />
-    <ArkivPoster imgSrc="././HM_22.webp" alt="2022" year="2022" />
-    <ArkivPoster imgSrc="././HM_23.webp" alt="2023" year="2023" />
-    <ArkivPoster imgSrc="././HM_24.webp" alt="2024" year="2024" />
+    <ArkivPoster imgSrc="public/img/HM_18.webp" alt="2018" year="2018" />
+    <ArkivPoster imgSrc="public/img/HM_19.webp" alt="2019" year="2019" />
+    <ArkivPoster imgSrc="public/img/HM_21.webp" alt="2021" year="2021" />
+    <ArkivPoster imgSrc="public/img/HM_22.webp" alt="2022" year="2022" />
+    <ArkivPoster imgSrc="public/img/HM_23.webp" alt="2023" year="2023" />
+    <ArkivPoster imgSrc="public/img/HM_24.webp" alt="2024" year="2024" />
   </div>
 </Layout>
 
@@ -59,6 +69,16 @@ import Layout from "../layout/Layout.astro";
     color: #bde300;
   }
 
+  .arkiv_top {
+    display: flex;
+    justify-content: space-between; /* pushes them left & right */
+    align-items: center; /* vertical alignment */
+  }
+
+  .arkiv_header {
+    margin: 0; /* optional – removes default spacing */
+  }
+
   hr {
     border: none;
     height: 2px;
@@ -67,15 +87,32 @@ import Layout from "../layout/Layout.astro";
     margin: 10px auto 100px auto;
   }
 
+  .arkiv_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .circle_wrapper {
+    margin-right: 50px;
+    margin-top: 150px;
+  }
+
   /* Header */
   .arkiv_header {
     font-size: 1.5rem;
     text-align: left;
     margin: 4rem 0 0 2.5rem;
+    margin-top: 150px;
   }
 
   .omOs_wrapper {
     margin-top: 3rem;
+  }
+  .vector_img {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
   }
 
   .om_header {
@@ -111,8 +148,19 @@ import Layout from "../layout/Layout.astro";
     .arkiv_header {
       font-size: 2rem;
       text-align: left;
-      margin: 100px auto 2rem 260px;
+      margin: 100px auto 0 135px;
       max-width: 1300px;
+    }
+
+    .arkiv_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .circle_wrapper {
+      margin-right: 150px;
+      margin-top: 100px;
     }
 
     hr {

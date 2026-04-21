@@ -26,229 +26,262 @@ import transport from "../assets/praktisk_img/Transport.webp";
     <a href="#Måltidet">Måltidet</a>
     <a href="#Transport">Transport</a>
   </div>
+  <div class="wrapper">
+    <PraktiskSectionRev id="Pladsen" title="Pladsen">
+      <p slot="text">Høst Møn er tilbage! Hold din øl! Hent din pung! I sidste weekend af august holder vi Høst Møn på Masnedøfortet. Det er lige uden for Vordingborg, så transporten er lettere, bølgerne er højere, og udsigten er stadigvæk Falster.Fra Hårbølle Strand kunne man se en lille hyggelig båd og måske en vindmølle. Herfra kan du se kæmpefærger og infrastruktur, som vore forældre lavede det. De to Storstrømsbroer indrammer vores nye festivalsite, og man kan stadig bade, bo i første række til havet, falde i søvn til vandet og electro fra natteteltet - og vågne op med en udsigt, der er en naturlig del af programmet.</p>
 
-  <PraktiskSectionRev id="Pladsen" title="Pladsen">
-    <p slot="text">Høst Møn er tilbage! Hold din øl! Hent din pung! I sidste weekend af august holder vi Høst Møn på Masnedøfortet. Det er lige uden for Vordingborg, så transporten er lettere, bølgerne er højere, og udsigten er stadigvæk Falster.Fra Hårbølle Strand kunne man se en lille hyggelig båd og måske en vindmølle. Herfra kan du se kæmpefærger og infrastruktur, som vore forældre lavede det. De to Storstrømsbroer indrammer vores nye festivalsite, og man kan stadig bade, bo i første række til havet, falde i søvn til vandet og electro fra natteteltet - og vågne op med en udsigt, der er en naturlig del af programmet.</p>
+      <Image slot="image" src={PladsenImg} alt="billede af pladsen" />
+    </PraktiskSectionRev>
 
-    <Image slot="image" src={PladsenImg} alt="billede af pladsen" />
-  </PraktiskSectionRev>
+    <Image class="vector_img" src={BackVector} alt="Grafisk element i baggrunden af siden" />
 
-  <Image class="vector_img" src={BackVector} alt="Grafisk element i baggrunden af siden" />
-  <PraktiskSection id="Overnatning" title="Overnatning">
-    <p slot="text">
-      Overnatning på campingpladsen er inkluderet i prisen, og der er gode muligheder for at finde havudsigt på det store område. Vi anbefaler, at man kommer i god tid - og at man ikke lægger sig lige foran scenen.Der er badefaciliteter, og morgenmaden bliver serveret på sengen - hvis du selv trækker din luftmadras med op til langbordet.Der vil være et ikke lige så begrænset antal autocamperpladser til salg i 2026, som der plejer, men vi har desværre stadig ikke mulighed for at tilbyde strøm, vand og afløb til campingvogne. Det er praktisk talt umuligt, og vi beklager meget. Billetterne koster 200 kroner.Der er masser af parkeringsplads, men hvis du kommer fra København, opfordrer vi i den grad til at tage offentlig transport til Vordingborg eller vores dedikerede bus. Den kører fra
-      Hovedbanen fredag klokken 12.00 og 16.00, og den kører tilbage søndag klokken 13.00.
-    </p>
+    <PraktiskSection id="Overnatning" title="Overnatning">
+      <p slot="text">
+        Overnatning på campingpladsen er inkluderet i prisen, og der er gode muligheder for at finde havudsigt på det store område. Vi anbefaler, at man kommer i god tid - og at man ikke lægger sig lige foran scenen.Der er badefaciliteter, og morgenmaden bliver serveret på sengen - hvis du selv trækker din luftmadras med op til langbordet.Der vil være et ikke lige så begrænset antal autocamperpladser til salg i 2026, som der plejer, men vi har desværre stadig ikke mulighed for at tilbyde strøm, vand og afløb til campingvogne. Det er praktisk talt umuligt, og vi beklager meget. Billetterne koster 200 kroner.Der er masser af parkeringsplads, men hvis du kommer fra København, opfordrer vi i den grad til at tage offentlig transport til Vordingborg eller vores dedikerede bus. Den kører fra
+        Hovedbanen fredag klokken 12.00 og 16.00, og den kører tilbage søndag klokken 13.00.
+      </p>
 
-    <Image slot="image" src={Overnatning} alt="billede af pladsen omhandlende overnatning" />
-  </PraktiskSection>
+      <Image slot="image" src={Overnatning} width={600} quality={85} format="webP" alt="billede af pladsen omhandlende overnatning" />
+    </PraktiskSection>
 
-  <PraktiskSectionRev title="Måltidet" id="Måltidet">
-    <p slot="text">Høst Møn er andet og meget mere end koncerter med havudsigt, dansefest under åben himmel og camping med træk&slip. Det er også en fest, der kredser - og kræser- om det fælles måltid, og Høst Møns Madjunta har udfoldet nedenstående manifest for måltidet på Høst Møn. Den store fællesmiddag lørdag er inkluderet i billetprisen. Alle andre måltider sælges separat på pladsen, og der er både vegetariske og veganske muligheder.</p>
+    <PraktiskSectionRev title="Måltidet" id="Måltidet">
+      <p slot="text">Høst Møn er andet og meget mere end koncerter med havudsigt, dansefest under åben himmel og camping med træk&slip. Det er også en fest, der kredser - og kræser- om det fælles måltid, og Høst Møns Madjunta har udfoldet nedenstående manifest for måltidet på Høst Møn. Den store fællesmiddag lørdag er inkluderet i billetprisen. Alle andre måltider sælges separat på pladsen, og der er både vegetariske og veganske muligheder.</p>
 
-    <h3 slot="text">Det spiser vi:</h3>
-    <p slot="text">Mad og råvarer er fra omegnen og fra personer vi kender. De kigger forbi festivalen, så sig hej, hvis du møder dem. Råvareudbud og sæson afgør menuen. Menuen for Høst Møns måltider er tilrettelagt ud fra de producenter, der ligger i omegnen, og som har råvarer, der er i sæson.Det sætter et naturligt benspænd for, hvad der er på menuen, og skaber et måltid, der afspejler årstiden. Råvarer er så lidt forarbejdede som muligt – og så bruger vi det hele. Det er for os vigtigt at arbejde med en tilgang om, at hele råvaren bruges, så køkkenet ikke efterlader et unødvendigt spild, der ellers kunne have været til nytte et andet sted.</p>
+      <h3 slot="text">Det spiser vi:</h3>
+      <p slot="text">Mad og råvarer er fra omegnen og fra personer vi kender. De kigger forbi festivalen, så sig hej, hvis du møder dem. Råvareudbud og sæson afgør menuen. Menuen for Høst Møns måltider er tilrettelagt ud fra de producenter, der ligger i omegnen, og som har råvarer, der er i sæson.Det sætter et naturligt benspænd for, hvad der er på menuen, og skaber et måltid, der afspejler årstiden. Råvarer er så lidt forarbejdede som muligt – og så bruger vi det hele. Det er for os vigtigt at arbejde med en tilgang om, at hele råvaren bruges, så køkkenet ikke efterlader et unødvendigt spild, der ellers kunne have været til nytte et andet sted.</p>
 
-    <h3 slot="text">Sådan spiser vi:</h3>
-    <p slot="text">Vi spiser sammen. Børn, voksne, dem der har lavet maden, dem der spiller musikken, og dem der står bag baren. Måltidet skal være en sanselig oplevelse, og maden skal nydes. Vi vil gerne mindske affodrings-buffeter, hvor maden kun er til for at mætte. Vi har sat os for, at selvom vi er mange, der skal spise sammen på samme tid, skal det være et sted for fællesskab og et fælles sted at opleve det unikt tilrettelagte Høst Møn måltid.</p>
+      <h3 slot="text">Sådan spiser vi:</h3>
+      <p slot="text">Vi spiser sammen. Børn, voksne, dem der har lavet maden, dem der spiller musikken, og dem der står bag baren. Måltidet skal være en sanselig oplevelse, og maden skal nydes. Vi vil gerne mindske affodrings-buffeter, hvor maden kun er til for at mætte. Vi har sat os for, at selvom vi er mange, der skal spise sammen på samme tid, skal det være et sted for fællesskab og et fælles sted at opleve det unikt tilrettelagte Høst Møn måltid.</p>
 
-    <h3 slot="text">Fællesspisning:</h3>
+      <h3 slot="text">Fællesspisning:</h3>
 
-    <p slot="text">Vi spiser sammen om lørdagen i to hold. Første hold klokken 18-19 og andet fra 20-21, og du kan reservere din plads ved indgangen. Vi tænker, at børnefamilierne gerne vil til klokken 18, så vi opfordrer andre til at tage den sene spisning.</p>
+      <p slot="text">Vi spiser sammen om lørdagen i to hold. Første hold klokken 18-19 og andet fra 20-21, og du kan reservere din plads ved indgangen. Vi tænker, at børnefamilierne gerne vil til klokken 18, så vi opfordrer andre til at tage den sene spisning.</p>
 
-    <Image slot="image" src={food} alt="billede af pladsen omhandlende Måltidet" />
-    <Image slot="image" class="hide" src={food2} alt="billede af pladsen omhandlende Måltidet" />
-    <Image slot="image" class="hide" src={food3} alt="billede af pladsen omhandlende Måltidet" />
-  </PraktiskSectionRev>
+      <Image slot="image" src={food} alt="billede af pladsen omhandlende Måltidet" />
+      <Image slot="image" class="hide" src={food2} alt="billede af pladsen omhandlende Måltidet" />
+      <Image slot="image" class="hide" src={food3} alt="billede af pladsen omhandlende Måltidet" />
+    </PraktiskSectionRev>
 
-  <PraktiskSection title="Transport" id="Transport">
-    <p slot="text">
-      <span class="highlight">Bus fra København til Høst Møn - Fredag kl. 12.00 (Tur/Retur) </span><br />
-      <br />
-      Vil du nemt med fra København til Høst Møn? <br /> Hop på festivalbussen fra DGI Byen ved Hovedbanegården (Ingerslevsgade) og kør direkte til festivalen. <br />
-      <br />
+    <Image class="vector_img_rev" src={BackVector} alt="Grafisk element i baggrunden af siden" />
 
-      <span class="highlight"> Afgang: Fredag d. 28. august kl. 12.00 <br /> Ankomst til Høst Møn: ca. kl. 14.00 </span>
-      <br />
-      <br />
-      <span class="highlight"> Retur: Søndag d. 1. september kl. 13.00 fra Høst Møn. </span>
-      <br />
-      <br />
+    <PraktiskSection title="Transport" id="Transport">
+      <p slot="text">
+        <span class="highlight">Bus fra København til Høst Møn - Fredag kl. 12.00 (Tur/Retur) </span><br />
+        <br />
+        Vil du nemt med fra København til Høst Møn? <br /> Hop på festivalbussen fra DGI Byen ved Hovedbanegården (Ingerslevsgade) og kør direkte til festivalen. <br />
+        <br />
 
-      Antallet af pladser er begrænset – så hvis du vil sikre dig en plads på bussen, er det en god idé at booke i god tid. <br />
-      <br />
+        <span class="highlight"> Afgang: Fredag d. 28. august kl. 12.00 <br /> Ankomst til Høst Møn: ca. kl. 14.00 </span>
+        <br />
+        <br />
+        <span class="highlight"> Retur: Søndag d. 1. september kl. 13.00 fra Høst Møn. </span>
+        <br />
+        <br />
 
-      Pris: 250 kr. Bus fra København til Høst Møn - Fredag kl. 16.00 (Tur/Retur) <br />
-      <br />
+        Antallet af pladser er begrænset – så hvis du vil sikre dig en plads på bussen, er det en god idé at booke i god tid. <br />
+        <br />
 
-      Kan du først komme afsted lidt senere på dagen? <br />
-      Vi har også en festivalbus der kører fra DGI Byen ved Hovedbanegården (Ingerslevsgade) fredag eftermiddag. <br />
-      <br />
+        Pris: 250 kr. Bus fra København til Høst Møn - Fredag kl. 16.00 (Tur/Retur) <br />
+        <br />
 
-      <span class="highlight"> Afgang: Fredag d. 28. august kl. 16.00 Ankomst til Høst Møn: ca. kl. 18.00 </span>
-      <br />
-      <span class="highlight"> Retur: Søndag d. 1. september kl. 13.00 fra Høst Møn. </span>
-      <br />
-      Der er begrænset antal pladser på bussen. Pris: 250 kr.
-    </p>
+        Kan du først komme afsted lidt senere på dagen? <br />
+        Vi har også en festivalbus der kører fra DGI Byen ved Hovedbanegården (Ingerslevsgade) fredag eftermiddag. <br />
+        <br />
 
-    <Image slot="image" src={transport} alt="billede af pladsen omhandlende Transport" />
+        <span class="highlight"> Afgang: Fredag d. 28. august kl. 16.00 Ankomst til Høst Møn: ca. kl. 18.00 </span>
+        <br />
+        <span class="highlight"> Retur: Søndag d. 1. september kl. 13.00 fra Høst Møn. </span>
+        <br />
+        Der er begrænset antal pladser på bussen. Pris: 250 kr.
+      </p>
 
-    <div slot="link" class="Button"><a href="#">Find og Køb Busbillet</a></div>
-  </PraktiskSection>
+      <Image slot="image" src={transport} alt="billede af pladsen omhandlende Transport" />
 
-  <style>
-    /***** SCROLL *****/
-    html {
-      scroll-behavior: smooth;
-    }
+      <div slot="link" class="Button"><a href="#">Find og Køb Busbillet</a></div>
+    </PraktiskSection>
+  </div>
+</Layout>
 
-    /******* HERO ********/
+<style>
+  /***** SCROLL *****/
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /******* HERO ********/
+  .Hero {
+    padding-top: 5rem;
+  }
+
+  .Praktisk_Menu {
+    margin: auto 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .Praktisk_Menu a:hover {
+    text-decoration: overline;
+  }
+
+  .Background_img {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: auto;
+    opacity: 0.06;
+    margin-top: 0rem;
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+  .vector_img {
+    position: absolute;
+    z-index: -100;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .vector_img_rev {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: auto;
+  }
+
+  /*********** FONTS **********/
+  h1 {
+    margin: auto 0;
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: 1rem;
+  }
+
+  .highlight {
+    font-weight: bolder;
+  }
+
+  /********* SECTIONER LAYOUT **********/
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Section_divider {
+    height: 2px;
+    background-color: var(--text-color);
+    width: 100%;
+  }
+
+  .Praktisk_img {
+    width: 100%;
+    height: auto;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .wrapper {
+    margin: 0 2rem 0 2rem;
+  }
+  /*********** KNAPPER ************/
+
+  .Button {
+    border-radius: 999px;
+    border: 2px solid var(--cta-color);
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: fit-content;
+    margin-top: 1rem;
+    padding: 8px;
+  }
+
+  .Button a {
+    padding: 2rem;
+    text-decoration: none;
+  }
+
+  .Button:hover {
+    background-color: black;
+    border-color: black;
+  }
+
+  /********** FONT **********/
+  h2 {
+    align-self: end;
+  }
+
+  /********** DESKTOP **********/
+  @media (min-width: 801px) {
+    /********* HERO  ********/
     .Praktisk_Menu {
       margin: auto 0;
-      text-align: center;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      text-align: center;
+      gap: 3rem;
+      justify-content: center;
+      margin-bottom: 11rem;
+    }
+    .Hero {
+      padding-top: 10rem;
+    }
+
+    /********** SECTIONER LAYOUT **********/
+    .Praktisk_Section {
+      gap: 1rem;
+      column-gap: 2rem;
+    }
+    .PraktiskSection {
+      margin-bottom: 5rem;
+    }
+
+    .Desktop_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 2rem;
     }
 
-    .Background_img {
-      position: absolute;
-      z-index: -100;
-      width: 100%;
-      height: auto;
-      opacity: 0.06;
-      margin-top: 0rem;
+    .reversed_img {
+      grid-column: 1/2;
+      grid-row: 1/2;
     }
 
-    .vector_img {
-      position: absolute;
-      z-index: -100;
-      width: 100%;
-    }
-
-    .Hero {
-      padding-top: 5rem;
-    }
-
-    /*********** FONTS **********/
-    h1 {
-      margin: auto 0;
-      text-align: center;
-    }
-
-    h3 {
-      margin-top: 1rem;
-    }
-
-    .highlight {
-      font-weight: bolder;
-    }
-
-    /********* SECTIONER LAYOUT **********/
-    .grid_1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .Section_divider {
-      height: 2px;
-      background-color: var(--text-color);
-      width: 100%;
-    }
-
-    .Praktisk_img {
-      width: 100%;
-      height: auto;
-    }
-
-    section {
-      margin-bottom: 3rem;
+    .reversed_text {
+      grid-column: 2/3;
+      grid-row: 1/2;
     }
 
     .hide {
-      display: none;
+      display: block;
+    }
+
+    .Section_divider {
+      height: 3px;
+
+      grid-column: span 2;
     }
 
     img {
-      margin-top: 1rem;
+      margin-top: 0rem;
     }
-    /*********** KNAPPER ************/
-
-    .Button {
-      border-radius: 999px;
-      border: 2px solid var(--cta-color);
-      background: transparent;
-      cursor: pointer;
-      transition: 0.3s ease;
-      width: fit-content;
-      margin-top: 1rem;
-      padding: 8px;
-    }
-
-    .Button a {
-      padding: 2rem;
-      text-decoration: none;
-    }
-
-    .Button:hover {
-      background-color: black;
-      border-color: black;
-    }
-
-    /********** FONT **********/
-    h2 {
-      align-self: end;
-    }
-
-    /********** DESKTOP **********/
-    @media (min-width: 801px) {
-      /********* HERO  ********/
-      .Praktisk_Menu {
-        margin: auto 0;
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        gap: 2rem;
-        justify-content: center;
-      }
-      .Hero {
-        padding-top: 10rem;
-      }
-
-      /********** SECTIONER LAYOUT **********/
-      .Praktisk_Section {
-        gap: 1rem;
-        column-gap: 2rem;
-      }
-
-      .Desktop_grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-
-      .reversed_img {
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-
-      .reversed_text {
-        grid-column: 2/3;
-        grid-row: 1/2;
-      }
-
-      .hide {
-        display: block;
-      }
-
-      .Section_divider {
-        height: 3px;
-
-        grid-column: span 2;
-      }
-
-      /*********** VISUELLE ELEMENTER *********/
-    }
-  </style>
-</Layout>
+    /*********** VISUELLE ELEMENTER *********/
+  }
+</style>

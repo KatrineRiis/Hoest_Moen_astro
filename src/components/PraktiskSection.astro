@@ -1,12 +1,16 @@
 ---
 const { title, id } = Astro.props;
+import CircleElement from "./CircleElement.astro";
 ---
 
 <section {id}>
   <div class="Praktisk_Section">
     <div class="grid_1-1">
       <h2>{title}</h2>
-      <div class="Cirkle_element"></div>
+
+      <div class="Circle_Wrapper">
+        <CircleElement />
+      </div>
     </div>
     <div class="Section_divider"></div>
 
@@ -30,18 +34,13 @@ const { title, id } = Astro.props;
     gap: 2rem;
   }
 
-  .Cirkle_element {
-    background-color: var(--section-color);
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    box-shadow: 0 0 40px 10px var(--section-color);
+  .Circle_Wrapper {
     justify-self: end;
     align-self: center;
   }
 
   section {
-    margin: 0rem 1rem 3rem 1rem;
+    margin: 0rem 1rem 10rem 1rem;
   }
 
   /********** SECTION DIVIDER ***********/
@@ -59,9 +58,7 @@ const { title, id } = Astro.props;
       gap: 2rem;
     }
 
-    .Cirkle_element {
-      width: 50px;
-      height: 50px;
+    .Circle_Wrapper {
       justify-self: left;
       grid-column: 1/2;
       grid-row: 1/2;
