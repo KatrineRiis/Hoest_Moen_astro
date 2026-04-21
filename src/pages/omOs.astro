@@ -44,7 +44,6 @@ import Layout from "../layout/Layout.astro";
 <style>
   /*mobile*/
   body {
-    background-color: #0b2320;
     margin: 0;
     font-family: sans-serif;
   }
@@ -52,7 +51,7 @@ import Layout from "../layout/Layout.astro";
   h1,
   h2,
   p {
-    color: #eed094;
+    color: var(--text-color);
     margin: 0;
   }
 
@@ -63,7 +62,7 @@ import Layout from "../layout/Layout.astro";
   hr {
     border: none;
     height: 2px;
-    background-color: #eed094;
+    background-color: var(--text-color);
     max-width: 350px;
     margin: 10px auto 100px auto;
   }
