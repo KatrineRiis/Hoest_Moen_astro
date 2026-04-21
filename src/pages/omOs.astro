@@ -1,45 +1,44 @@
 ---
-import ArkivButton from "../components/ArkivButton.astro";
 import ArkivPoster from "../components/ArkivPoster.astro";
+import Heroimg from "../components/Heroimg.astro";
 import Layout from "../layout/Layout.astro";
 ---
 
 <Layout title="Om Os">
-  <main>
-    <h1 class="om_header">OM HØST MØN</h1>
-    <div class="omOs_wrapper">
-      <p class="omOs_tekst">Billetterne er i salg nu! Inflationen inden for æstetik, alkohol og gebyrer er stadig høj, så priserne bliver nødt til at følge med. Men det lover vi, at kvaliteten og oplevelsen også gør, og vi stiller pengene-tilbage-garanti for enorm lykke. Hvad med navnet? Det finder vi ud af. Indtil videre hedder vi det samme. Man kan tage festivalen ud af Møn, men ikke Møn ud af festivalen og alt det der.</p>
+  <Heroimg />
+  <h1 class="om_header">OM HØST MØN</h1>
+  <div class="omOs_wrapper">
+    <p class="omOs_tekst">Billetterne er i salg nu! Inflationen inden for æstetik, alkohol og gebyrer er stadig høj, så priserne bliver nødt til at følge med. Men det lover vi, at kvaliteten og oplevelsen også gør, og vi stiller pengene-tilbage-garanti for enorm lykke. Hvad med navnet? Det finder vi ud af. Indtil videre hedder vi det samme. Man kan tage festivalen ud af Møn, men ikke Møn ud af festivalen og alt det der.</p>
 
-      <p class="omOs_tekst">Det er den syvende Høst Møn på ni år, for hverken verdensomspændende pandemier eller lokalt huserende markfirben kan holde os fra at skabe skønne, støjende fællesskaber på sydlige breddegrader med alle jer.</p>
+    <p class="omOs_tekst">Det er den syvende Høst Møn på ni år, for hverken verdensomspændende pandemier eller lokalt huserende markfirben kan holde os fra at skabe skønne, støjende fællesskaber på sydlige breddegrader med alle jer.</p>
 
-      <p class="omOs_tekst">Vi er sikkert stadig sommerens sidste skrig, og vores enorme ambitioner er uændrede. Høst Møn er en musikfestival for folk, der elsker begge dele: musik og festival. Vi er til for mennesker, der gerne vil lytte til musikken. Vi booker bredt fra dit yndlingsband til de små spillesteders snavsede juveler.</p>
+    <p class="omOs_tekst">Vi er sikkert stadig sommerens sidste skrig, og vores enorme ambitioner er uændrede. Høst Møn er en musikfestival for folk, der elsker begge dele: musik og festival. Vi er til for mennesker, der gerne vil lytte til musikken. Vi booker bredt fra dit yndlingsband til de små spillesteders snavsede juveler.</p>
 
-      <p class="omOs_tekst">Der kommer mindst 12 bands på årets festival. Der kommer økologisk fadøl og lokalbrygget gin. Der er opbyggelig fællesspisning med nedbrydeligt bestik under kulørte lamper. Det er havudsigt, stjernehimmel og træk-og-slip.</p>
+    <p class="omOs_tekst">Der kommer mindst 12 bands på årets festival. Der kommer økologisk fadøl og lokalbrygget gin. Der er opbyggelig fællesspisning med nedbrydeligt bestik under kulørte lamper. Det er havudsigt, stjernehimmel og træk-og-slip.</p>
 
-      <p class="omOs_tekst">Du kan gøre, hvad du vil på Høst Møn – med eller uden børn og søvn. Omgivelserne er trygge, og rammerne er vide, og hvis du vil bade om natten og drikke om morgenen, så kan du gøre det. Så længe du ikke snakker foran scenen, når musikken spiller.</p>
+    <p class="omOs_tekst">Du kan gøre, hvad du vil på Høst Møn – med eller uden børn og søvn. Omgivelserne er trygge, og rammerne er vide, og hvis du vil bade om natten og drikke om morgenen, så kan du gøre det. Så længe du ikke snakker foran scenen, når musikken spiller.</p>
 
-      <p class="omOs_tekst">Det lykkedes os ikke at finde et nyt sted i 2025, så i stedet brugte vi vores kræfter på at kuratere og afvikle musik til den nystartede Impact Festival i Københavns Sydhavn sammen med de fine folk fra Trifolium. Det gør vi igen i 2026, samtidig med at vi holder Høst Møn.</p>
-    </div>
+    <p class="omOs_tekst">Det lykkedes os ikke at finde et nyt sted i 2025, så i stedet brugte vi vores kræfter på at kuratere og afvikle musik til den nystartede Impact Festival i Københavns Sydhavn sammen med de fine folk fra Trifolium. Det gør vi igen i 2026, samtidig med at vi holder Høst Møn.</p>
+  </div>
 
-    <div class="omOs_tekst">
-      <p class="kontakt_tekst">Kontakt os:</p>
-      <p class="kontakt_tekst">Spørgsmål, samarbejde, generel info: <span class="links">info@hoestmoen.dk</span></p>
-      <p class="kontakt_tekst">Booking: <span class="links">booking@hoestmoen.dk</span></p>
-      <p class="kontakt_tekst">Produktion (scene, plads, infrastruktur): <span class="links">produktion@hoestmoen.dk</span></p>
-      <p class="kontakt_tekst">Frivillige: <span class="links">frivillig@hoestmoen.dk</span></p>
-    </div>
+  <div class="omOs_tekst">
+    <p class="kontakt_tekst">Kontakt os:</p>
+    <p class="kontakt_tekst">Spørgsmål, samarbejde, generel info: <span class="links">info@hoestmoen.dk</span></p>
+    <p class="kontakt_tekst">Booking: <span class="links">booking@hoestmoen.dk</span></p>
+    <p class="kontakt_tekst">Produktion (scene, plads, infrastruktur): <span class="links">produktion@hoestmoen.dk</span></p>
+    <p class="kontakt_tekst">Frivillige: <span class="links">frivillig@hoestmoen.dk</span></p>
+  </div>
 
-    <h2 class="arkiv_header">ARKIV</h2>
-    <hr />
-    <div class="grid_1_1">
-      <ArkivPoster imgSrc="././HM_18.webp" alt="2018" year="2018" />
-      <ArkivPoster imgSrc="././HM_19.webp" alt="2019" year="2019" />
-      <ArkivPoster imgSrc="././HM_21.webp" alt="2021" year="2021" />
-      <ArkivPoster imgSrc="././HM_22.webp" alt="2022" year="2022" />
-      <ArkivPoster imgSrc="././HM_23.webp" alt="2023" year="2023" />
-      <ArkivPoster imgSrc="././HM_24.webp" alt="2024" year="2024" />
-    </div>
-  </main>
+  <h2 class="arkiv_header">ARKIV</h2>
+  <hr />
+  <div class="grid_1_1">
+    <ArkivPoster imgSrc="././HM_18.webp" alt="2018" year="2018" />
+    <ArkivPoster imgSrc="././HM_19.webp" alt="2019" year="2019" />
+    <ArkivPoster imgSrc="././HM_21.webp" alt="2021" year="2021" />
+    <ArkivPoster imgSrc="././HM_22.webp" alt="2022" year="2022" />
+    <ArkivPoster imgSrc="././HM_23.webp" alt="2023" year="2023" />
+    <ArkivPoster imgSrc="././HM_24.webp" alt="2024" year="2024" />
+  </div>
 </Layout>
 
 <style>
@@ -84,7 +83,7 @@ import Layout from "../layout/Layout.astro";
     letter-spacing: 5px;
     text-align: center;
     font-size: 2.3rem;
-    margin-top: 10rem;
+    padding-top: 10rem;
   }
 
   /* Text container */
@@ -124,7 +123,7 @@ import Layout from "../layout/Layout.astro";
     .om_header {
       font-size: 5rem;
       letter-spacing: 10px;
-      margin-top: 10rem;
+      padding-top: 10rem;
       margin-bottom: 5rem;
     }
 
