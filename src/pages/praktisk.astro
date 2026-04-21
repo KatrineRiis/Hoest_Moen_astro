@@ -34,13 +34,14 @@ import transport from "../assets/praktisk_img/Transport.webp";
   </PraktiskSectionRev>
 
   <Image class="vector_img" src={BackVector} alt="Grafisk element i baggrunden af siden" />
+
   <PraktiskSection id="Overnatning" title="Overnatning">
     <p slot="text">
       Overnatning på campingpladsen er inkluderet i prisen, og der er gode muligheder for at finde havudsigt på det store område. Vi anbefaler, at man kommer i god tid - og at man ikke lægger sig lige foran scenen.Der er badefaciliteter, og morgenmaden bliver serveret på sengen - hvis du selv trækker din luftmadras med op til langbordet.Der vil være et ikke lige så begrænset antal autocamperpladser til salg i 2026, som der plejer, men vi har desværre stadig ikke mulighed for at tilbyde strøm, vand og afløb til campingvogne. Det er praktisk talt umuligt, og vi beklager meget. Billetterne koster 200 kroner.Der er masser af parkeringsplads, men hvis du kommer fra København, opfordrer vi i den grad til at tage offentlig transport til Vordingborg eller vores dedikerede bus. Den kører fra
       Hovedbanen fredag klokken 12.00 og 16.00, og den kører tilbage søndag klokken 13.00.
     </p>
 
-    <Image slot="image" src={Overnatning} alt="billede af pladsen omhandlende overnatning" />
+    <Image slot="image" src={Overnatning} width={600} quality={85} format="webP" alt="billede af pladsen omhandlende overnatning" />
   </PraktiskSection>
 
   <PraktiskSectionRev title="Måltidet" id="Måltidet">
@@ -60,6 +61,8 @@ import transport from "../assets/praktisk_img/Transport.webp";
     <Image slot="image" class="hide" src={food2} alt="billede af pladsen omhandlende Måltidet" />
     <Image slot="image" class="hide" src={food3} alt="billede af pladsen omhandlende Måltidet" />
   </PraktiskSectionRev>
+
+  <Image class="vector_img_rev" src={BackVector} alt="Grafisk element i baggrunden af siden" />
 
   <PraktiskSection title="Transport" id="Transport">
     <p slot="text">
@@ -96,159 +99,177 @@ import transport from "../assets/praktisk_img/Transport.webp";
 
     <div slot="link" class="Button"><a href="#">Find og Køb Busbillet</a></div>
   </PraktiskSection>
+</Layout>
 
-  <style>
-    /***** SCROLL *****/
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+  /***** SCROLL *****/
+  html {
+    scroll-behavior: smooth;
+  }
 
-    /******* HERO ********/
+  /******* HERO ********/
+  .Hero {
+    padding-top: 5rem;
+  }
+
+  .Praktisk_Menu {
+    margin: auto 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .Praktisk_Menu a:hover {
+    text-decoration: overline;
+  }
+
+  .Background_img {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: auto;
+    opacity: 0.06;
+    margin-top: 0rem;
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+  .vector_img {
+    position: absolute;
+    z-index: -100;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .vector_img_rev {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: auto;
+  }
+
+  /*********** FONTS **********/
+  h1 {
+    margin: auto 0;
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: 1rem;
+  }
+
+  .highlight {
+    font-weight: bolder;
+  }
+
+  /********* SECTIONER LAYOUT **********/
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .Section_divider {
+    height: 2px;
+    background-color: var(--text-color);
+    width: 100%;
+  }
+
+  .Praktisk_img {
+    width: 100%;
+    height: auto;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  img {
+    margin-top: 1rem;
+  }
+
+  /*********** KNAPPER ************/
+
+  .Button {
+    border-radius: 999px;
+    border: 2px solid var(--cta-color);
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: fit-content;
+    margin-top: 1rem;
+    padding: 8px;
+  }
+
+  .Button a {
+    padding: 2rem;
+    text-decoration: none;
+  }
+
+  .Button:hover {
+    background-color: black;
+    border-color: black;
+  }
+
+  /********** FONT **********/
+  h2 {
+    align-self: end;
+  }
+
+  /********** DESKTOP **********/
+  @media (min-width: 801px) {
+    /********* HERO  ********/
     .Praktisk_Menu {
       margin: auto 0;
-      text-align: center;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      text-align: center;
+      gap: 3rem;
+      justify-content: center;
+    }
+    .Hero {
+      padding-top: 10rem;
+    }
+
+    /********** SECTIONER LAYOUT **********/
+    .Praktisk_Section {
+      gap: 1rem;
+      column-gap: 2rem;
+    }
+
+    .Desktop_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 2rem;
     }
 
-    .Background_img {
-      position: absolute;
-      z-index: -100;
-      width: 100%;
-      height: auto;
-      opacity: 0.06;
-      margin-top: 0rem;
+    .reversed_img {
+      grid-column: 1/2;
+      grid-row: 1/2;
     }
 
-    .vector_img {
-      position: absolute;
-      z-index: -100;
-      width: 100%;
-    }
-
-    .Hero {
-      padding-top: 5rem;
-    }
-
-    /*********** FONTS **********/
-    h1 {
-      margin: auto 0;
-      text-align: center;
-    }
-
-    h3 {
-      margin-top: 1rem;
-    }
-
-    .highlight {
-      font-weight: bolder;
-    }
-
-    /********* SECTIONER LAYOUT **********/
-    .grid_1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .Section_divider {
-      height: 2px;
-      background-color: var(--text-color);
-      width: 100%;
-    }
-
-    .Praktisk_img {
-      width: 100%;
-      height: auto;
-    }
-
-    section {
-      margin-bottom: 3rem;
+    .reversed_text {
+      grid-column: 2/3;
+      grid-row: 1/2;
     }
 
     .hide {
-      display: none;
+      display: block;
     }
 
-    img {
-      margin-top: 1rem;
-    }
-    /*********** KNAPPER ************/
+    .Section_divider {
+      height: 3px;
 
-    .Button {
-      border-radius: 999px;
-      border: 2px solid var(--cta-color);
-      background: transparent;
-      cursor: pointer;
-      transition: 0.3s ease;
-      width: fit-content;
-      margin-top: 1rem;
-      padding: 8px;
+      grid-column: span 2;
     }
 
-    .Button a {
-      padding: 2rem;
-      text-decoration: none;
-    }
-
-    .Button:hover {
-      background-color: black;
-      border-color: black;
-    }
-
-    /********** FONT **********/
-    h2 {
-      align-self: end;
-    }
-
-    /********** DESKTOP **********/
-    @media (min-width: 801px) {
-      /********* HERO  ********/
-      .Praktisk_Menu {
-        margin: auto 0;
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        gap: 2rem;
-        justify-content: center;
-      }
-      .Hero {
-        padding-top: 10rem;
-      }
-
-      /********** SECTIONER LAYOUT **********/
-      .Praktisk_Section {
-        gap: 1rem;
-        column-gap: 2rem;
-      }
-
-      .Desktop_grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-      }
-
-      .reversed_img {
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-
-      .reversed_text {
-        grid-column: 2/3;
-        grid-row: 1/2;
-      }
-
-      .hide {
-        display: block;
-      }
-
-      .Section_divider {
-        height: 3px;
-
-        grid-column: span 2;
-      }
-
-      /*********** VISUELLE ELEMENTER *********/
-    }
-  </style>
-</Layout>
+    /*********** VISUELLE ELEMENTER *********/
+  }
+</style>
