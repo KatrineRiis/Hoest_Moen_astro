@@ -4,6 +4,7 @@ import Heroimg from "../components/Heroimg.astro";
 import Layout from "../layout/Layout.astro";
 import { Image } from "astro:assets";
 import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
+import CircleElement from "../components/CircleElement.astro";
 ---
 
 <Layout title="Om Os">
@@ -33,7 +34,12 @@ import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
     <p class="kontakt_tekst">Frivillige: <span class="links">frivillig@hoestmoen.dk</span></p>
   </div>
 
-  <h2 class="arkiv_header">ARKIV</h2>
+  <div class="arkiv_wrapper">
+    <h2 class="arkiv_header">ARKIV</h2>
+    <div class="circle_wrapper">
+      <CircleElement />
+    </div>
+  </div>
   <hr />
   <div class="grid_1_1">
     <ArkivPoster imgSrc="././HM_18.webp" alt="2018" year="2018" />
@@ -63,6 +69,16 @@ import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
     color: #bde300;
   }
 
+  .arkiv_top {
+    display: flex;
+    justify-content: space-between; /* pushes them left & right */
+    align-items: center; /* vertical alignment */
+  }
+
+  .arkiv_header {
+    margin: 0; /* optional – removes default spacing */
+  }
+
   hr {
     border: none;
     height: 2px;
@@ -71,11 +87,23 @@ import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
     margin: 10px auto 100px auto;
   }
 
+  .arkiv_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .circle_wrapper {
+    margin-right: 50px;
+    margin-top: 150px;
+  }
+
   /* Header */
   .arkiv_header {
     font-size: 1.5rem;
     text-align: left;
     margin: 4rem 0 0 2.5rem;
+    margin-top: 150px;
   }
 
   .omOs_wrapper {
@@ -120,8 +148,19 @@ import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
     .arkiv_header {
       font-size: 2rem;
       text-align: left;
-      margin: 100px auto 2rem 135px;
+      margin: 100px auto 0 135px;
       max-width: 1300px;
+    }
+
+    .arkiv_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .circle_wrapper {
+      margin-right: 150px;
+      margin-top: 100px;
     }
 
     hr {
