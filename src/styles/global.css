@@ -177,6 +177,9 @@ footer img {
   width: 40px;
   height: auto;
 }
+.footer_grid_1-1 {
+  margin: 0 0 2rem 2rem;
+}
 
 footer p {
   font-size: 1rem;
@@ -188,7 +191,7 @@ footer p {
   background-color: #eed094;
   width: 100%;
   grid-column: span 2;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .Kontakt {
@@ -253,7 +256,13 @@ footer p {
     display: none;
   }
 
+  /******* SECTION DIVIDERS ********/
+
+  .Section_divider {
+    margin-bottom: 2rem;
+  }
   /******** FOOTER **********/
+
   .footer_grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
