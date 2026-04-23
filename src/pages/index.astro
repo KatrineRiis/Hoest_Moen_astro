@@ -1,16 +1,39 @@
 ---
+//@ts-nocheck
 import Layout from "../layout/Layout.astro";
+import CircleElement from "../components/CircleElement.astro";
+import ArtistCard from "../components/ArtistCard.astro";
+
+/*fetch data*/
+
+const endpoint =
+  "https://swkkdyxqvgaoetkrylai.supabase.co/rest/v1/Hoest_Moen?select=*";
+
+const options = {
+  headers: {
+    apikey: "sb_publishable_pAlKs4XVPtXYETzQEf106A_8XQsWf0m",
+  },
+};
+
+const data = await fetch(endpoint, options).then((response) => response.json());
 ---
 
 <Layout title="Forside">
   <div class="grid1">
     <video class="herovideo" src="/video/hostmonvideo.mp4" autoplay muted
     ></video>
+    <p class="program_pil">Program</p>
     <div class="circle">
       <h1 class="hostmon_titel">HØST MØN</h1>
-      <h2 class="subtitel">28-29 AUGUST</h2>
+      <p class="subtitel">28-29 AUGUST</p>
       <img src="/src/assets/logo/cirkel.png" alt="" />
     </div>
+  </div>
+
+  <div class="program">
+    <section>
+      {data.map((artist) => <ArtistCard {artist} />)}
+    </section>
   </div>
 </Layout>
 
@@ -23,6 +46,10 @@ import Layout from "../layout/Layout.astro";
 
   .grid1 {
     display: grid;
+  }
+
+  .program_pil {
+    grid-column:;
   }
 
   .circle {
