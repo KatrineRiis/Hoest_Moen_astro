@@ -4,12 +4,16 @@ import ArkivButton from "./ArkivButton.astro";
 const { imgSrc, year } = Astro.props;
 ---
 
-<div class="arkiv_poster">
-  <div class="img_wrapper">
-    <div class="circle"></div>
-    <img src={imgSrc} alt={year} class="shape" />
+<div class="poster_wrapper">
+  <div class="arkiv_poster">
+    <div class="img_wrapper">
+      <div class="circle"></div>
+
+      <img src={imgSrc} alt={`Høst Møn ${year}`} class="shape" />
+    </div>
+
+    <ArkivButton text={year} imgSrc={imgSrc} />
   </div>
-  <ArkivButton text={year} imgSrc={imgSrc} />
 </div>
 
 <style>
@@ -31,14 +35,19 @@ const { imgSrc, year } = Astro.props;
     position: absolute;
     width: 250px;
     height: 250px;
-    background: var(--background-color);
+    background: #bde300;
     border-radius: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-80%, -50%);
     z-index: 0;
   }
+
   @media (min-width: 1024px) {
+    .poster_wrapper {
+      margin-bottom: 10rem;
+    }
+
     .arkiv_poster {
       display: flex;
       flex-direction: column;
@@ -53,6 +62,7 @@ const { imgSrc, year } = Astro.props;
       height: 500px;
       border-radius: 999px;
       filter: drop-shadow(-25px 0px #bde300);
+      object-fit: cover;
     }
   }
 </style>
