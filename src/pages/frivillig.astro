@@ -1,0 +1,141 @@
+---
+import Layout from "../layout/Layout.astro";
+import Heroimg from "../components/Heroimg.astro"
+
+/*** IMG IMPORTS ***/
+import { Image } from "astro:assets";
+import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
+import TeenagerImg from '../assets/praktisk_img/teenager.webp';
+import HoodieImg from '../assets/praktisk_img/hoodie.webp';
+import BornImg from '../assets/praktisk_img/børn.webp';
+---
+
+<Layout title="Frivillig">
+  <div class="page-container">
+    <Heroimg />
+    <img class="Background_img" src="images/Hero_img.webp" alt="" />
+    <div class="Hero"></div>
+
+    <section class="content">
+      <h1>Bliv frivillig</h1>
+      <p>
+    Vi skal bruge en masse hjælp til at lave festival et helt nyt sted. Alle på festivalen arbejder frivilligt, og vi synes, at vi har en drøm af et fællesskab. Der er mange gengangere fra år og til år, og flere af arrangørerne havde deres debut på festivalen som frivillige i afviklingen.
+  </p>
+
+  <p>
+    Vi håber på at se en masse kendte ansigter, men vi har i den grad også plads til nye venner med stærke arme, hurtige hoveder og/eller varme hjerter, så tøv ikke med at melde dig til. Billetpriserne er også steget, så der er kun gode grunde.
+  </p>
+
+  <p>
+    Vi har brug for hjælp i dagene før, under og efter festivalen. En tjans består af 2x6 timer, og man får mad, gavekort til baren og festivalbillet retur. Vi holder også en frivilligfest en gang om året, ligesom man får adgang til Impact Festival 2026.
+  </p>
+
+  <p>
+    Samtidig er det vigtigt, at man er bevidst om, at det stadigvæk er et arbejde, og at vi forventer en dedikeret indsats i festivalens ånd. Festivalen kan slet ikke lade sig gøre uden frivillige, så man påtager sig et stort ansvar, men til gengæld får man uendeligt gode tider igen.
+  </p>
+
+  <p>
+    Skriv en mail til <a href="mailto:frivillig@hoestmoen.dk">frivillig@hoestmoen.dk</a>, hvis du er interesseret i at være med til at sætte dit præg på festivalen.
+  </p>
+    </section>
+
+    <div class="billede-grid">
+      <Image src={TeenagerImg} alt="Unge mennesker der hygger sig til festival" />
+      <Image src={HoodieImg} alt="Nærbillede af den officielle festival hoodie" />
+      <Image src={BornImg} alt="Børn der deltager i festivalens aktiviteter" />
+    </div>
+
+    <Image class="vector_img_rev" src={BackVector} alt="Grafisk grønt element i baggrunden" />
+  </div>
+</Layout>
+
+<style>
+
+    /**TEKST**/
+
+body{
+    position: relative;
+}
+
+footer{
+    background-color: var(--background-color) !important;
+}
+  .page-container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .content {
+  max-width: 800px; /* Dette sikrer, at teksten ikke strækker sig for langt ud til siderne */
+  margin: 0 auto;   /* Centrerer tekstindholdet på siden */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content p {
+  margin-bottom: 25px; /* Dette skaber den "luft" du ser i prototypen mellem afsnittene */
+  line-height: 1.6;    /* Gør teksten mere læsevenlig */
+  color:#EED094;
+}
+
+
+.content a {
+  color:#EED094;
+  text-decoration: underline;
+  font-size: 1.1rem;
+}
+
+  h1 {
+    text-transform: uppercase;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-top:5rem ;
+    margin-bottom: 2rem;
+    color:#EED094;
+  }
+
+  p {
+    max-width: 850px; /* Begrænser tekstbredden*/
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #EED094;
+    text-align: justify;
+    margin-bottom: 12rem;
+  }
+
+  
+  /** GRID FIX **/
+  .billede-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    width: 100%;
+    gap: 0; /* Billederne sidder sammen*/
+    padding-bottom: 2rem;
+  }
+
+  .billede-grid img {
+    width: 100%;
+    height: 450px; /* Fast højde */
+    object-fit: cover; /* Sørger for at billederne ikke bliver strukket */
+  }
+
+  /*** VECTOR POSITIONING ***/
+  .vector_img_rev {
+    position: absolute;
+    bottom:0; 
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    transform: rotate(5deg);
+  }
+
+  /* Responsiv til mobil */
+  @media (max-width: 768px) {
+    .billede-grid {
+      grid-template-columns: 1fr; 
+    }
+    .billede-grid img {
+      height: 300px;
+    }
+  }
+</style>

@@ -21,11 +21,14 @@ Disse hentes ind, under program, og sørger for at der nemt og overskueligt kan 
 
 ### Tema09_hoest_moen/
 
+Her er standard astro filer udeladt.
+
 ```bash
 ├── dist/
 │
 ├── public/
 │   ├── icons/
+│   ├── images/
 │
 ├── src/
 │   ├── assets/
@@ -62,6 +65,7 @@ Disse hentes ind, under program, og sørger for at der nemt og overskueligt kan 
 - Klon repository fra github og indsæt i Vscode.
 - Gem mappen i roden af computeren.
 - Åben terminalen og kør “npm install”
+- Kør sitet ved at skrive “npm run dev” i terminalen.
 
 ## Filbeskrivelser:
 
@@ -121,11 +125,15 @@ Det bruges ved at importere Images tagget i mellem fences: import { Image } from
 
 Dernæst importeres images fra assets mappen: import food3 from "../assets/praktisk_img/food3.webp";
 
-Dernæst kan det bruges i den ønskede størrelse, filformat, quality osv.<Image slot="image" src={food3} width={600} quality={85} format="webP" alt="billede af pladsen omhandlende måltidet" />
+Dernæst kan det bruges i den ønskede størrelse, filformat, quality osv.
+
+```bash
+<Image slot="image" src={food3} width={600} quality={85} format="webP" alt="billede af pladsen omhandlende måltidet" />
+```
 
 ## Navngivning:
 
-Vi har igennem projektet prøvet at navngive vores mapper, filer, og branches så tydeligt som muligt.
+Vi har igennem projektet forsøgt at navngive vores mapper, filer, og branches så tydeligt som muligt.
 
  
 

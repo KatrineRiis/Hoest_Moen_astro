@@ -18,6 +18,7 @@ import transport from "../assets/praktisk_img/Transport.webp";
 
 <Layout title="praktisk">
   <Heroimg />
+
   <div class="Hero"></div>
   <h1>Praktisk</h1>
   <div class="Praktisk_Menu">
@@ -62,7 +63,7 @@ import transport from "../assets/praktisk_img/Transport.webp";
       <Image slot="image" class="hide" src={food3} alt="billede af pladsen omhandlende Måltidet" />
     </PraktiskSectionRev>
 
-    <Image class="vector_img_rev" src={BackVector} alt="Grafisk element i baggrunden af siden" />
+    <Image class="vector_img" src={BackVector} alt="Grafisk element i baggrunden af siden" />
 
     <PraktiskSection title="Transport" id="Transport">
       <p slot="text">
@@ -144,13 +145,6 @@ import transport from "../assets/praktisk_img/Transport.webp";
     max-width: 100%;
     height: auto;
     object-fit: cover;
-  }
-
-  .vector_img_rev {
-    position: absolute;
-    z-index: -100;
-    width: 100%;
-    height: auto;
   }
 
   /*********** FONTS **********/

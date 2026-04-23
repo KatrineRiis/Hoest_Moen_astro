@@ -5,6 +5,21 @@ import Layout from "../layout/Layout.astro";
 import { Image } from "astro:assets";
 import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
 import CircleElement from "../components/CircleElement.astro";
+
+/*fetch data*/
+const url = `${import.meta.env.SUPABASE_URL}/rest/v1/Hoest_Moen?select=*`;
+const apiKey = import.meta.env.SUPABASE_PUBLISHABLE_KEY;
+
+const options = {
+  headers: {
+    apikey: apiKey,
+    Authorization: `Bearer ${apiKey}`,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+
+console.log(data);
 ---
 
 <Layout title="Om Os">
@@ -42,12 +57,7 @@ import CircleElement from "../components/CircleElement.astro";
   </div>
   <hr />
   <div class="grid_1_1">
-    <ArkivPoster imgSrc="../img/HM_18.webp" alt="2018" year="2018" />
-    <ArkivPoster imgSrc="../img/HM_19.webp" alt="2019" year="2019" />
-    <ArkivPoster imgSrc="../img/HM_21.webp" alt="2021" year="2021" />
-    <ArkivPoster imgSrc="../img/HM_22.webp" alt="2022" year="2022" />
-    <ArkivPoster imgSrc="../img/HM_23.webp" alt="2023" year="2023" />
-    <ArkivPoster imgSrc="../img/HM_24.webp" alt="2024" year="2024" />
+    {Array.isArray(data) && data.map((poster) => <ArkivPoster imgSrc={poster.poster} year={poster.year} />)}
   </div>
 </Layout>
 
@@ -144,11 +154,12 @@ import CircleElement from "../components/CircleElement.astro";
       max-width: 1300px;
       margin: 0 auto;
       padding: 0 1rem;
+      margin-bottom: 4rem;
     }
     .arkiv_header {
       font-size: 2rem;
       text-align: left;
-      margin: 100px auto 0 135px;
+      margin: 100px auto 0 3rem;
       max-width: 1300px;
     }
 
@@ -159,7 +170,6 @@ import CircleElement from "../components/CircleElement.astro";
     }
 
     .circle_wrapper {
-      margin-right: 150px;
       margin-top: 100px;
     }
 
@@ -176,7 +186,7 @@ import CircleElement from "../components/CircleElement.astro";
 
     .grid_1_1 {
       grid-template-columns: 1fr 1fr; /* 2 columns */
-      gap: 7rem;
+      padding-inline: 0.2rem;
       align-items: center;
     }
 
