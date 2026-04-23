@@ -1,0 +1,80 @@
+---
+const { artist } = Astro.props;
+---
+
+<section>
+  <details name="my_detail">
+    <summary class="Artist_kort">
+      <div class="kort_billeder">
+        <img src={artist.KunstnerBilleder} alt="" />
+      </div>
+      <div class="titel_pil">
+        <p class="artist_kunstner">{artist.kunstner}</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="85"
+          height="68"
+          viewBox="0 0 85 68"
+          fill="none"
+        >
+          <rect
+            x="1"
+            y="1"
+            width="83"
+            height="66"
+            rx="19"
+            stroke="#BDE300"
+            stroke-width="2"></rect>
+          <path
+            d="M47.5175 49.6689C45.5733 52.893 40.8981 52.893 38.9539 49.6689L27.4561 30.6015C25.4466 27.2691 27.8465 23.0196 31.7379 23.0196H54.7336C58.625 23.0196 61.0248 27.2691 59.0153 30.6015L47.5175 49.6689Z"
+            fill="#BDE300"></path>
+        </svg>
+      </div>
+    </summary>
+
+    <div>
+      <p>{artist.kunstnerinfo}</p>
+    </div>
+  </details>
+</section>
+
+<style>
+  .Artist_kort {
+    ::details-content {
+      width: 964px;
+      height: 322px;
+      overflow: clip;
+      transition: 0.3s allow-discrete;
+    }
+
+    [open]::details-content {
+      height: auto;
+    }
+  }
+
+  summary::marker {
+    content: none;
+  }
+
+  img {
+    width: 240px;
+    height: auto;
+  }
+
+  section {
+    display: grid;
+    gap: 30px;
+    max-width: 963px;
+    margin: 0 auto;
+    background-color: #6a7b70;
+  }
+
+  .kort_billeder {
+    display: flex;
+  }
+
+  .titel_pil {
+    display: flex;
+    justify-content: flex-end;
+  }
+</style>
