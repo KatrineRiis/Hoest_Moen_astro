@@ -89,6 +89,8 @@ import BilletterPopup from "../components/BilletterPopup.astro";
   </style>
 
   <script>
+    // Burger Animation
+
     const burger = document.querySelector(".burger");
     const nav = document.querySelector("nav");
 
@@ -98,16 +100,17 @@ import BilletterPopup from "../components/BilletterPopup.astro";
       nav.classList.toggle("active");
     }
 
+    //PopUp Button til billetter
     const btn = document.querySelector("#Billet");
     const popup = document.querySelector("#Popup");
 
-    // Åbn popup
+    // PopUp Åben
     btn.addEventListener("click", (e) => {
       e.stopPropagation(); // 👈 vigtigt
       popup.classList.remove("hide");
     });
 
-    // Klik udenfor → luk popup
+    // PopUp Luk
     document.addEventListener("click", (e) => {
       if (!popup.contains(e.target)) {
         popup.classList.add("hide");
