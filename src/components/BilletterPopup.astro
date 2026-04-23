@@ -1,0 +1,61 @@
+---
+
+---
+
+<div class="wrapper">
+  <div class="Billet_popup">
+    <img class="Logo" src="src/assets/praktisk_img/Logo.webp" alt="Logo" />
+    <div class="text_layer">
+      <h4>Høst Møn Festival</h4>
+      <p>
+        <span class="thin"> 28. aug, 2026 12:00 - 29. aug. 2026 23:00</span>
+        <br />
+        Fortvej, 8 4760, Vordingborg
+      </p>
+    </div>
+    <a class="Billetter" href="#">Find Billetter</a>
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    position: relative;
+  }
+
+  .Billet_popup {
+    position: absolute;
+    z-index: 100;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 80%;
+
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: var(--section-color);
+    border-radius: 50px;
+    border: 2px solid var(--cta-color);
+
+    gap: 1rem;
+  }
+
+  .Logo {
+    height: 12rem;
+    width: auto;
+  }
+
+  .text_layer {
+    align-self: center;
+  }
+
+  .thin {
+    font-weight: lighter;
+  }
+
+  .Billetter {
+    height: 4rem;
+    align-self: center;
+  }
+</style>
