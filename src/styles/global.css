@@ -51,6 +51,10 @@ h3 {
   font-size: 16px;
 }
 
+h4 {
+  font-size: 11px;
+}
+
 p,
 a,
 ul,
@@ -144,6 +148,8 @@ nav.active .menu {
   height: auto;
   background-color: var(--section-color);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+  background: linear-gradient(to top, var(--section-color), var(--background-color));
 }
 
 nav.active .menu li {
@@ -161,6 +167,26 @@ nav.active .menu li {
   font-size: 1.2rem;
   border: 2px solid var(--cta-color);
   border-radius: 50px;
+}
+
+.Billerter_Burger {
+  background-color: var(--cta-color);
+  box-shadow: 2px 2px 10px var(--decoration-color);
+
+  text-align: center;
+  transition: 0.7s;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+}
+
+.Billerter_Burger a {
+  color: black;
+}
+
+.Billerter_Burger a:hover {
+  color: var(--cta-color);
 }
 
 .menu a:hover {
@@ -303,6 +329,10 @@ footer p {
   }
   h3 {
     font-size: 48px;
+  }
+
+  h4 {
+    font-size: 24px;
   }
 
   p,

@@ -1,6 +1,7 @@
 ---
 const { title } = Astro.props;
 import "../styles/global.css";
+import BilletterPopup from "../components/BilletterPopup.astro";
 ---
 
 <!doctype html>
@@ -12,7 +13,7 @@ import "../styles/global.css";
     <meta name="robots" content="noindex" />
     <title>{title}</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="dist/favIcon2.webp" />
+    <link rel="icon" type="image/x-icon" href="../icons/favIcon3.webp" />
 
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,11 +30,11 @@ import "../styles/global.css";
           <li><a href="">Bliv Frivillig</a></li>
           <li><a href="praktisk">Praktisk</a></li>
           <li><a href="omOs">Om os</a></li>
-          <li class="Billerter_Burger"><a href="cart.html">Billetter</a></li>
+          <li class="Billerter_Burger"><a href="#">Billetter</a></li>
         </ul>
       </nav>
 
-      <a class="Billetter" href="cart.html">Billetter</a>
+      <a class="Billetter" id="Billet" href="#">Billetter</a>
 
       <button class="burger" aria-label="Menu">
         <span class="line"></span>
@@ -41,41 +42,77 @@ import "../styles/global.css";
         <span class="line"></span>
       </button>
     </header>
+    <div class="hide fadeIn" id="Popup">
+      <BilletterPopup />
+    </div>
 
     <main>
       <slot />
-    </main>
 
-    <footer>
-      <div class="Section_divider"></div>
-      <div class="footer_grid_1-1">
-        <div>
-          <p>Sommerens sidste skrig</p>
-          <p>Vender tilbage i 2026</p>
-          <p>DET BLIVER HØJT OG SMUKT</p>
-        </div>
+      <footer>
+        <div class="Section_divider"></div>
+        <div class="footer_grid_1-1">
+          <div>
+            <p>Sommerens sidste skrig</p>
+            <p>Vender tilbage i 2026</p>
+            <p>DET BLIVER HØJT OG SMUKT</p>
+          </div>
 
-        <div class="Kontakt">
-          <a href="#">info@hoestmoen.dk</a>
-          <div class="soMe_icons">
-            <img src="../icons/desktop_fb_ikon.webp" alt="Link til Facebook" />
-            <img src="../icons/desktop_insta_ikon.webp" alt="Link til Instagram" />
+          <div class="Kontakt">
+            <a href="#">info@hoestmoen.dk</a>
+            <div class="soMe_icons">
+              <img src="../icons/desktop_fb_ikon.webp" alt="Link til Facebook" />
+              <img src="../icons/desktop_insta_ikon.webp" alt="Link til Instagram" />
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </main>
   </body>
+
+  <style>
+    .hide {
+      display: none;
+    }
+
+    .fadeIn {
+      animation: fadeIn_kf 0.4s linear;
+    }
+
+    @keyframes fadeIn_kf {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <script>
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+
+    burger.addEventListener("click", burgerClick);
+    function burgerClick() {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+    }
+
+    const btn = document.querySelector("#Billet");
+    const popup = document.querySelector("#Popup");
+
+    // Åbn popup
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation(); // 👈 vigtigt
+      popup.classList.remove("hide");
+    });
+
+    // Klik udenfor → luk popup
+    document.addEventListener("click", (e) => {
+      if (!popup.contains(e.target)) {
+        popup.classList.add("hide");
+      }
+    });
+  </script>
 </html>
-
-<style></style>
-
-<script>
-  const burger = document.querySelector(".burger");
-  const nav = document.querySelector("nav");
-
-  burger.addEventListener("click", burgerClick);
-  function burgerClick() {
-    burger.classList.toggle("active");
-    nav.classList.toggle("active");
-  }
-</script>
