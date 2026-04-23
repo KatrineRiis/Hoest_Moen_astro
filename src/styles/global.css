@@ -22,10 +22,6 @@ p {
   color: var(--text-color);
 }
 
-a {
-  color: #bde300;
-}
-
 h1 {
   font-family: "Monoton", sans-serif;
   font-weight: 400;
@@ -67,6 +63,7 @@ dt {
   color: var(--text-color);
   font-size: 11px;
   line-height: 1rem;
+  text-wrap: pretty;
 }
 
 a {

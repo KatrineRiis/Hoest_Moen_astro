@@ -25,9 +25,9 @@ import BilletterPopup from "../components/BilletterPopup.astro";
     <header>
       <nav>
         <ul class="menu">
-          <li><a href="index.html">Program</a></li>
+          <li><a href="index">Program</a></li>
 
-          <li><a href="">Bliv Frivillig</a></li>
+          <li><a href="frivillig">Bliv Frivillig</a></li>
           <li><a href="praktisk">Praktisk</a></li>
           <li><a href="omOs">Om os</a></li>
           <li class="Billerter_Burger"><a href="#">Billetter</a></li>
@@ -48,26 +48,25 @@ import BilletterPopup from "../components/BilletterPopup.astro";
 
     <main>
       <slot />
+    </main>
+    <footer>
+      <div class="Section_divider"></div>
+      <div class="footer_grid_1-1">
+        <div>
+          <p>Sommerens sidste skrig</p>
+          <p>Vender tilbage i 2026</p>
+          <p>DET BLIVER HØJT OG SMUKT</p>
+        </div>
 
-      <footer>
-        <div class="Section_divider"></div>
-        <div class="footer_grid_1-1">
-          <div>
-            <p>Sommerens sidste skrig</p>
-            <p>Vender tilbage i 2026</p>
-            <p>DET BLIVER HØJT OG SMUKT</p>
-          </div>
-
-          <div class="Kontakt">
-            <a href="#">info@hoestmoen.dk</a>
-            <div class="soMe_icons">
-              <img src="../icons/desktop_fb_ikon.webp" alt="Link til Facebook" />
-              <img src="../icons/desktop_insta_ikon.webp" alt="Link til Instagram" />
-            </div>
+        <div class="Kontakt">
+          <a href="#">info@hoestmoen.dk</a>
+          <div class="soMe_icons">
+            <a href="#"> <img src="../icons/desktop_fb_ikon.webp" alt="Link til Facebook" /></a>
+            <a href="#"> <img src="../icons/desktop_insta_ikon.webp" alt="Link til Instagram" /></a>
           </div>
         </div>
-      </footer>
-    </main>
+      </div>
+    </footer>
   </body>
 
   <style>
