@@ -1,5 +1,6 @@
 ---
 import Layout from "../layout/Layout.astro";
+import Heroimg from "../components/Heroimg.astro"
 
 /***IMG****/
 import { Image } from "astro:assets";
@@ -7,7 +8,7 @@ import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
 ---
 
 <Layout title ="Frivillig">
-   
+   <Heroimg></Heroimg>
   <img class="Background_img" src="images/Hero_img.webp" alt="" />
   <div class="Hero"></div>
 <h1>Bliv frivillig</h1>
@@ -24,4 +25,27 @@ import BackVector from "../assets/praktisk_img/BackgroundVector.webp";
       Festivalen kan slet ikke lade sig  gøre uden frivillige, så man påtager sig et stort ansvar, 
       men til  gengæld får man uendeligt gode tider igen.Skriv en mail til frivillig@hoestmoen.dk, 
       hvis du er interesseret i at være med til at sætte dit præg på festivalen.</p>
+
+      <Image class="vector_img_rev" src={BackVector} alt="Grafisk element i baggrunden" />
 </Layout>
+
+<style>
+   /***FONT***/ 
+
+/***VECTOR***/
+.vector_img {
+    position: absolute;
+    z-index: -100;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .vector_img_rev {
+    position: absolute;
+    z-index: -100;
+    width: 100%;
+    height: auto;
+  }
+
+</style>
